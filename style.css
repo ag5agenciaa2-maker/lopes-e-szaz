@@ -494,18 +494,16 @@ img {
 }
 
 .visual-wrapper {
-    position: relative;
-    border-radius: 1.5rem;
-    overflow: hidden;
-    box-shadow: var(--shadow-xl);
-    background-color: var(--stone-100);
-    aspect-ratio: 3 / 2;
+    display: block;
+    width: 100%;
 }
 
 .visual-wrapper img {
     width: 100%;
-    height: 100%;
-    object-fit: cover;
+    height: auto;
+    min-height: 200px;
+    object-fit: contain;
+    border-radius: 1.5rem;
     transition: transform var(--transition-slow);
 }
 
@@ -1996,6 +1994,7 @@ img[loading="lazy"].loaded {
     margin-bottom: 0;
     display: -webkit-box;
     -webkit-line-clamp: 4;
+    line-clamp: 4;
     -webkit-box-orient: vertical;
     overflow: hidden;
 }
